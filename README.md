@@ -49,6 +49,12 @@ Performance comparison on ImageNet-1K classification with IN-21K as training dat
 |MAE|ViT-L| 85.9| 
 |BEiT|ViT-L| 88.6|
 |D-iGPT|ViT-L| 89.5|
+
+## Checkpoint
+The pretrained models are available at 
+
+[[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
+
 ## ✍ Citation
 
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
