@@ -9,8 +9,6 @@ from util.pos_embed import get_2d_sincos_pos_embed
 import torch.nn.functional as F
 
 class DiGPT(nn.Module):
-    """ Masked Autoencoder with VisionTransformer backbone
-    """
     def __init__(self, img_size=224, patch_size=16, in_chans=3,
                  embed_dim=1024, depth=24, num_heads=16,
                  decoder_embed_dim=512, decoder_depth=8, decoder_num_heads=16,
@@ -169,7 +167,7 @@ class DiGPT(nn.Module):
         kd_token = self.kd_pred(kd_token)
         return ar_token, kd_token
 
-    def forward_loss_v1(self, pred, teacher_out):
+    def forward_loss(self, pred, teacher_out):
         # pred B num_seg  Seg_size C
         num_seg = self.num_seg
         seg_size=64
@@ -187,13 +185,6 @@ class DiGPT(nn.Module):
         loss = 2 - 2 * (pred * teacher_out).sum(dim=-1)
         return loss
 
-    def forward_loss_v2(self, pred, teacher_out):
-        # pred B num_seg  Seg_size C
-        pred = pred / pred.norm(dim=-1, keepdim=True)
-        teacher_out = teacher_out / teacher_out.norm(dim=-1, keepdim=True)
-        assert pred.shape == teacher_out.shape
-        loss = 2 - 2 * (pred * teacher_out).sum(dim=-1)
-        return loss
 
     def forward(self, imgs, target):
         B,N,C = target.shape
@@ -201,12 +192,8 @@ class DiGPT(nn.Module):
         latent_ar, latent_kd, pos_embed, decoder_pos_embed, new_target = self.forward_encoder(imgs, new_target)
         ar_pred, kd_pred = self.forward_decoder(latent_ar, latent_kd, decoder_pos_embed)  # [N, L, p*p*3]
 
-        if self.patch_size==16:
-            ar_loss = self.forward_loss_v1(ar_pred, torch.cat([new_target[:, 1:].reshape(B, -1, C), target[:, :1]], dim=1))
-            kd_loss = self.forward_loss_v1(kd_pred, torch.cat([new_target[:, :-1].reshape(B, -1, C), target[:, :1]], dim=1))
-        elif self.patch_size == 14:
-            ar_loss = self.forward_loss_v2(ar_pred, torch.cat([new_target[:, 1:].reshape(B, -1, C), target[:, :1]], dim=1))
-            kd_loss = self.forward_loss_v2(kd_pred, torch.cat([new_target[:, :-1].reshape(B, -1, C), target[:, :1]], dim=1))
+        ar_loss = self.forward_loss(ar_pred, torch.cat([new_target[:, 1:].reshape(B, -1, C), target[:, :1]], dim=1))
+        kd_loss = self.forward_loss(kd_pred, torch.cat([new_target[:, :-1].reshape(B, -1, C), target[:, :1]], dim=1))
         return ar_loss.mean(), kd_loss.mean()
 
 
@@ -218,12 +205,4 @@ def DiGPT_vit_base(**kwargs):
     return model
 
 
-def DiGPT_vit_large(**kwargs):
-    model = DiGPT(
-        patch_size=16, embed_dim=1024, depth=24, num_heads=16,
-        decoder_embed_dim=1024, decoder_depth=2, decoder_num_heads=32,
-        mlp_ratio=4, norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
-    return model
-
 DiGPT_vit_base=DiGPT_vit_base
-DiGPT_vit_large=DiGPT_vit_large
