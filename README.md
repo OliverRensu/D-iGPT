@@ -15,7 +15,7 @@ This repository is the official implementation of our
 ![method](figure/method.png)
 
 ## Model Training
-We train our base size D-iGPT on torch+GPU and large size D-iGPT on torch_xla+TPU. Please refer [D-iGPT](https://github.com/OliverRensu/D-iGPT/DiGPT_torch/) and [D-iGPT_torchxla (coming soon)](./torch_xla) resplectively.
+We train our base size D-iGPT on torch+GPU and large size D-iGPT on torch_xla+TPU. Please refer [D-iGPT](https://github.com/OliverRensu/D-iGPT/tree/main/DiGPT_torch) and [D-iGPT_torchxla (coming soon)](./torch_xla) resplectively.
 
 
 ## Performance
