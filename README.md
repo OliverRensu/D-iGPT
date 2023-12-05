@@ -6,7 +6,7 @@ This repository is the official implementation of our
 
 [[arxiv](https://arxiv.org/abs/2301.01296)] [[code](https://github.com/OliverRensu/TinyMIM)] [[webpage](https://oliverrensu.github.io/Project/DiGPT/index.html)]
 
-*[Sucheng Ren](https://oliverrensu.github.io/), [Zeyu Wang](https://zw615.github.io/), [Hongru Zhu](https://pages.jh.edu/hzhu38/) [Junfei Xiao](https://lambert-x.github.io/), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Cihang Xie](cihangxie.github.io)*
+*[Sucheng Ren](https://oliverrensu.github.io/), [Zeyu Wang](https://zw615.github.io/), [Hongru Zhu](https://pages.jh.edu/hzhu38/) [Junfei Xiao](https://lambert-x.github.io/), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Cihang Xie](https://cihangxie.github.io)*
 
 
 ## Introduction
