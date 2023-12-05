@@ -10,7 +10,7 @@ This repository is the official implementation of our
 
 
 <p align="center">
-  <img src="teaser_digpt.png" width="540">
+  <img src="teaser_digpt.png" width="450">
 </p>
 
 ## Introduction
