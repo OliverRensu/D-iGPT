@@ -1,6 +1,6 @@
 # D-iGPT
 
-This repository is the official implementation of our  [**Rejuvenating image-GPT as Strong Visual Representation Learners**](https://arxiv.org/abs/2301.01296)
+This repository is the official implementation of our  [**Rejuvenating image-GPT as Strong Visual Representation Learners**](https://arxiv.org/abs/2312.02147)
 
 <p align="center">
   <img src="teaser_digpt.png" width="450">
