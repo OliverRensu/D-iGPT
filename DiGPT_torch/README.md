@@ -4,8 +4,6 @@ This repository is the official  PyTorch+GPU implementation of our
 
 **Rejuvenating image-GPT as Strong Visual Representation Learners**
 
-[[arxiv](https://arxiv.org/abs/2301.01296)] [[code](https://github.com/OliverRensu/TinyMIM)] [[webpage](https://oliverrensu.github.io/Project/DiGPT/index.html)]
-
 *[Sucheng Ren](https://oliverrensu.github.io/), [Zeyu Wang](https://zw615.github.io/), [Hongru Zhu](https://pages.jh.edu/hzhu38/) [Junfei Xiao](https://lambert-x.github.io/), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Cihang Xie](cihangxie.github.io)*
 
 
@@ -28,7 +26,7 @@ main_pretrain.py \
     --blr 1.5e-4 --weight_decay 0.05 \
     --data_path /path/to/ImageNet/
 ```
-If your GPU has enough memory, you can set batch_size=64 accum_iter=1
+If your GPU has enough memory, you can set batch_size=128 accum_iter=1
 
 ## Fine-tuning on ImageNet-1K (Classification)
 ```
