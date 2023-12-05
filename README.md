@@ -55,6 +55,11 @@ The pretrained models are available at
 
 [[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
 
+## Acknowledgement
+
+We are  very grateful that this work is supported by TPU Research Cloud (TRC) program and Google Cloud Research Credits program.
+
+
 ## ✍ Citation
 
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
