@@ -22,7 +22,7 @@ Performance comparison on ImageNet-1K classification and ADE20K Semantic Segment
 |MAE|ViT-B| 83.6| 48.1|
 |RandSac|ViT-B| 83.7| -|
 |EVA|ViT-B| 85.5| 53.3|
-|D-iGPT|ViT-B| 85.0 | 53.8|
+|D-iGPT|ViT-B| 86.2 | 53.8|
 
 
 The torch+GPU code produces better results. This is likely caused by the system difference between torch+GPU and torchxla+TPU.
