@@ -1,13 +1,6 @@
 # D-iGPT
 
-This repository is the official implementation of our 
-
-**Rejuvenating image-GPT as Strong Visual Representation Learners**
-
-[[arxiv](https://arxiv.org/abs/2301.01296)] [[code](https://github.com/OliverRensu/TinyMIM)] [[webpage](https://oliverrensu.github.io/Project/DiGPT/index.html)]
-
-*[Sucheng Ren](https://oliverrensu.github.io/), [Zeyu Wang](https://zw615.github.io/), [Hongru Zhu](https://pages.jh.edu/hzhu38/), [Junfei Xiao](https://lambert-x.github.io/), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Cihang Xie](https://cihangxie.github.io)*
-
+This repository is the official implementation of our  [**Rejuvenating image-GPT as Strong Visual Representation Learners**](https://arxiv.org/abs/2301.01296)
 
 <p align="center">
   <img src="teaser_digpt.png" width="450">
@@ -55,9 +48,7 @@ Performance comparison on ImageNet-1K classification with IN-21K as training dat
 |D-iGPT|ViT-L| 89.5|
 
 ## Checkpoint
-The pretrained models are available at 
-
-[[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
+The pretrained models are available at [[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
 
 ## Acknowledgement
 
