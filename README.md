@@ -49,7 +49,7 @@ Performance comparison on ImageNet-1K classification with IN-21K as training dat
 |OpenClip|ViT-H| 88.6|
 |D-iGPT|ViT-H| 90.0|
 ## Checkpoint
-The pretrained models are available at [[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
+The pretrained models are available at [[huggingface🤗](https://huggingface.co/OliverRen/D-iGPT/tree/main)]
 
 ## Acknowledgement
 
