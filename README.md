@@ -1,6 +1,6 @@
 # D-iGPT
 
-This repository is the official implementation of our  [**Rejuvenating image-GPT as Strong Visual Representation Learners**](https://arxiv.org/abs/2312.02147)
+This repository is the official implementation of our  [**Rejuvenating image-GPT as Strong Visual Representation Learners**](https://arxiv.org/abs/2312.02147) (accepted by ICML2024)
 
 <p align="center">
   <img src="teaser_digpt.png" width="450">
@@ -12,7 +12,7 @@ This repository is the official implementation of our  [**Rejuvenating image-GPT
 ![method](figure/method.png)
 
 ## Model Training
-We train our base size D-iGPT on torch+GPU and large size D-iGPT on torch_xla+TPU. Please refer [D-iGPT](https://github.com/OliverRensu/D-iGPT/tree/main/DiGPT_torch) and [D-iGPT_torchxla (coming soon)](./torch_xla) respectively.
+We train our base size D-iGPT on torch+GPU and large/huge size D-iGPT on torch_xla+TPU. Please refer [D-iGPT](https://github.com/OliverRensu/D-iGPT/tree/main/DiGPT_torch) and [D-iGPT_torchxla](./DiGPT_torchxla) respectively.
 
 
 ## Performance
@@ -46,7 +46,8 @@ Performance comparison on ImageNet-1K classification with IN-21K as training dat
 |MAE|ViT-L| 85.9| 
 |BEiT|ViT-L| 88.6|
 |D-iGPT|ViT-L| 89.5|
-
+|OpenClip|ViT-H| 88.6|
+|D-iGPT|ViT-H| 90.0|
 ## Checkpoint
 The pretrained models are available at [[Google Drive](https://drive.google.com/drive/folders/1fO6QL_4g50d4a4cZ0UUIccfKicVWrguY?usp=sharing)]
 
