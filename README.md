@@ -57,11 +57,12 @@ We are  very grateful that this work is supported by TPU Research Cloud (TRC) pr
 
 
 ## ✍ Citation
+```
 @inproceedings{ren2024digpt,
    title = {Rejuvenating i-GPT for Scalable Visual Representation Learning},
    author = {Ren, Sucheng and Wang, Zeyu and Zhu, Hongru and Xiao, Junfei and Yuille, Alan and Xie, Cihang},
    booktitle = {ICML},
    year = {2024}
 }
-
+```
 If you have any question, feel free to contact [Sucheng Ren](https://oliverrensu.github.io/) :)
