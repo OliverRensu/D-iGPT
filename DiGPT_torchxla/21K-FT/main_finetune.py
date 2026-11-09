@@ -386,7 +386,7 @@ def main(args):
     if args.rank == 0:
         logging.info("Params:")
         params_file = os.path.join(args.output_dir, "params.txt")
-        with open(params_file, "w") as f:
+        with open(params_file, "w", encoding="utf-8") as f:
             for name in sorted(vars(args)):
                 val = getattr(args, name)
                 logging.info(f"  {name}: {val}")
